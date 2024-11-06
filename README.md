@@ -1,20 +1,16 @@
 # Sign-Language-Translator
 
-This project is aimed at developing a Neural Network using LSTM and Dense layers to translate any sign language into text. It provides a user-friendly way for individuals to train their own Neural Network model and enables real-time predictions as well as grammar correction of predicted sentences. 
+This project is aimed at developing a Neural Network using LSTM and Dense layers to translate VietNamese sign language into text (natural language). It enables real-time recognition as well as grammar correction of recognited sentences. 
 
 ### Key Features:
 * User-friendly data collection process for creating custom sign language datasets.
-* Training of a Neural Network model using LSTM and Dense layers.
-* Real-time predictions of hand gestures based on hand landmarks.
-* Integration of language_tool_python library to perform grammar correction.
-* Incorporation of MediaPipe Holistic pipeline for accurate hand tracking.
+* Real-time recognition base on action landmarks, include: face, two-hand, pose.
+* Integration of LLAMA3 to perform grammar correction.
 
 <p align="center"> <img src="img/1_1.gif" alt="drawing" width="450"/> </p>
 
-
 ## Description
 
-This project provides an opportunity for people to train their own Neural Network by recording their own dataset of hand gestures in an intuitive and simple manner.
 The whole project can be split into three main parts:
 1. Data collection.
 2. Model training.
