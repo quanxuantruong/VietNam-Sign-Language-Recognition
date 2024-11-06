@@ -9,7 +9,7 @@ Dự án phát triển một mạng nơ-ron thần kinh sử dụng các lớp L
 * Tích hợp mô hình ngôn ngữ lớn LLAMA3-70B để thực hiện sửa lỗi ngữ pháp, hoàn thiện câu.
 * Tích hợp pipeline MediaPipe Holistic để theo dõi hành động và trích xuất các đặc trưng mốc điểm.
 
-## Description
+## Mô tả:
 
 Toàn bộ dự án chia thành ba phần chính:
 1. Thu thập dữ liệu.
@@ -34,9 +34,9 @@ Once the Neural Network is compiled, one can proceed with the model training and
 
 In this step, the Neural Network is ready to apply everything it has learned to the real-world problem. [MediaPipe Holistic](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/holistic.md) pipeline processes every frame captured by a video camera and extracts hands' landmarks. Every new frame the script appends the landmarks to the previous ones until it reaches the length 30. Once 30 frames are processed and the corresponding landmarks are grouped together, the script converts the list with all the landmarks into an array and passes this array to the trained Neural Network so it can predict the sign of the user's hands. The prediction is then appended to the sentence list initialized earlier and the first word of the sentence is capitalized. Once the user has finished recording the sentence they can press "Enter" to perform a grammar check and correction using the llms. If the user is not satisfied with the result they can press the "Spacebar" to reset the lists and start over.
 
-## Conclusion
+## Kết luận
 
-By combining advanced machine learning techniques and real-time hand tracking, Sign-Language-Translator empowers individuals to bridge the communication gap between sign language gestures and text, facilitating effective communication for the deaf and hearing-impaired.
+Bằng cách kết hợp các kỹ thuật học máy, học sâu tiên tiến và theo dõi hành động thời gian thực, dự án giúp mọi người thu hẹp khoảng cách giao tiếp giữa ngôn ngữ ký hiệu và văn bản (ngôn ngữ tự nhiên), tạo điều kiện giao tiếp hiệu quả cho người điếc và khiếm thính.
 
-## Prerequisites
+## Yêu cầu:
 * Python 3.6+
