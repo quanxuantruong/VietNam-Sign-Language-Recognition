@@ -4,7 +4,7 @@ Dự án phát triển một mạng nơ-ron thần kinh sử dụng các lớp L
 
 ### Tính năng chính:
 * Quy trình tự thu thập dữ liệu để tạo bộ dữ liệu ngôn ngữ ký hiệu tùy chỉnh, đa dạng.
-* Sử dụng các lớp LSTM và Dense để cấu tạo mô hình.
+* Sử dụng các lớp LSTM để cấu tạo mô hình.
 * Nhận dạng thời gian thực dựa trên các mốc điểm hành động của tay, mặt, dáng người.
 * Tích hợp mô hình ngôn ngữ lớn LLAMA3-70B để thực hiện sửa lỗi ngữ pháp, hoàn thiện câu.
 * Tích hợp pipeline MediaPipe Holistic để theo dõi hành động và trích xuất các đặc trưng mốc điểm.
