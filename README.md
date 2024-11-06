@@ -1,6 +1,6 @@
 # Sign-Language-Recognition
 
-Dự án phát triển một mạng nơ-ron thần kinh sử dụng các lớp LSTM và Dense để nhận dạng và chuyển ngôn ngữ ký hiệu tiếng Việt thành ngôn ngữ tự nhiên. Dự án cho phép nhận dạng trên thời gian thực cũng như sửa ngữ pháp cho các câu được nhận dạng. Ngoài ra, mô hình cung cấp khả năng cho người dùng có thể tự huấn luyện trên bộ dữ liệu của riêng họ.
+Dự án phát triển một mạng nơ-ron thần kinh sử dụng các lớp LSTM để nhận dạng và chuyển ngôn ngữ ký hiệu tiếng Việt thành ngôn ngữ tự nhiên. Dự án cho phép nhận dạng trên thời gian thực cũng như sửa ngữ pháp cho các câu được nhận dạng. Ngoài ra, mô hình cung cấp khả năng cho người dùng có thể tự huấn luyện trên bộ dữ liệu của riêng họ.
 
 ### Tính năng chính:
 * Quy trình tự thu thập dữ liệu để tạo bộ dữ liệu ngôn ngữ ký hiệu tùy chỉnh, đa dạng.
@@ -36,7 +36,7 @@ In this step, the Neural Network is ready to apply everything it has learned to 
 
 ## Kết luận
 
-Bằng cách kết hợp các kỹ thuật học máy, học sâu tiên tiến và theo dõi hành động thời gian thực, dự án giúp mọi người thu hẹp khoảng cách giao tiếp giữa ngôn ngữ ký hiệu và văn bản (ngôn ngữ tự nhiên), tạo điều kiện giao tiếp hiệu quả cho người điếc và khiếm thính.
+Bằng cách kết hợp các kỹ thuật học máy, học sâu tiên tiến và theo dõi hành động thời gian thực, dự án giúp mọi người thu hẹp khoảng cách giao tiếp giữa ngôn ngữ ký hiệu và văn bản (ngôn ngữ tự nhiên), tạo điều kiện giao tiếp hiệu quả cho người khiếm thính.
 
 ## Yêu cầu:
 * Python 3.6+
