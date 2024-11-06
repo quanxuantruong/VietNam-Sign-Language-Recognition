@@ -1,29 +1,24 @@
-# Sign-Language-Translator
+# Sign-Language-Recognition
 
-This project is aimed at developing a Neural Network using LSTM and Dense layers to translate any sign language into text. It provides a user-friendly way for individuals to train their own Neural Network model and enables real-time predictions as well as grammar correction of predicted sentences. 
+Dự án phát triển một mạng nơ-ron thần kinh sử dụng các lớp LSTM và Dense để nhận dạng và chuyển ngôn ngữ ký hiệu tiếng Việt thành ngôn ngữ tự nhiên. Dự án cho phép nhận dạng trên thời gian thực cũng như sửa ngữ pháp cho các câu được nhận dạng. Ngoài ra, mô hình cung cấp khả năng cho người dùng có thể tự huấn luyện trên bộ dữ liệu của riêng họ.
 
-### Key Features:
-* User-friendly data collection process for creating custom sign language datasets.
-* Training of a Neural Network model using LSTM and Dense layers.
-* Real-time predictions of hand gestures based on actions landmarks.
-* Integration of llms to perform grammar correction.
-* Incorporation of MediaPipe Holistic pipeline for accurate action tracking.
-
-<p align="center"> <img src="img/1_1.gif" alt="drawing" width="450"/> </p>
+### Tính năng chính:
+* Quy trình tự thu thập dữ liệu để tạo bộ dữ liệu ngôn ngữ ký hiệu tùy chỉnh, đa dạng.
+* Sử dụng các lớp LSTM và Dense để cấu tạo mô hình.
+* Nhận dạng thời gian thực dựa trên các mốc điểm hành động của tay, mặt, dáng người.
+* Tích hợp mô hình ngôn ngữ lớn LLAMA3-70B để thực hiện sửa lỗi ngữ pháp, hoàn thiện câu.
+* Tích hợp pipeline MediaPipe Holistic để theo dõi hành động và trích xuất các đặc trưng mốc điểm.
 
 ## Description
 
-This project provides an opportunity for people to train their own Neural Network by recording their own dataset of hand gestures in an intuitive and simple manner.
-The whole project can be split into three main parts:
-1. Data collection.
-2. Model training.
-3. Real time predictions.
+Toàn bộ dự án chia thành ba phần chính:
+1. Thu thập dữ liệu.
+2. Huấn luyện mô hình.
+3. Nhận dạng thời gian thực.
 
-## Data Collection
+## Thu thập dữ liệu
 
 In order for a user to collect data and create their own dataset, the [data_collection.py] is used. The script is organized in a way that it would be easy to configure your own preferences and options, such as the signs the user would like to add to their dataset, the number of sequences for each sign, the number of frames for each sequence, and the path where the user would like to store the dataset. Once these parameters were set and the script is running, the user can start recording the data. <ins>It is recommended that the user records a substantial number of sequences changing the position of their hands. This way the user can ensure data diversity which helps to obtain a generalized model.</ins>
-
-<p align="center"> <img src="img/1_2.gif" alt="drawing" width="450"/> </p>
 
 [MediaPipe Holistic](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/holistic.md) pipeline was used to record the data from the user's actions. Using [MediaPipe Holistic](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/holistic.md) instead of [MediaPipe Hands](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/hands.md) opens doors to future extensions and possibilities of this script. The pipeline processes each frame sent through it and results in the pose, face, left hand, and right hand components neatly stored in a variable. Each of the components can be represented by landmarks (these components' coordinates). It resulting in overall 126 data entries (21 landmarks per hand with _x_, _y_, _z_ coordinates per landmark).
 
