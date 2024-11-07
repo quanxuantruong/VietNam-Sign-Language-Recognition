@@ -1,5 +1,5 @@
 /.venv
 /__pycache__
 /MP_Data
-/VSLR.ipynb
-/action.h5
+*VSLR.ipynb
+*action.h5
