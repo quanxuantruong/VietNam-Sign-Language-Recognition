@@ -6,7 +6,7 @@ import numpy as np
 DATA_PATH = os.path.join('MP_Data') 
 
 # Actions that we try to detect
-actions = np.array(['chị'])
+actions = np.array(['toi','thich','mau hong','none'])
 
 # Thirty videos worth of data
 no_sequences = 30
