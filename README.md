@@ -7,7 +7,7 @@ This project is aimed at developing a Neural Network using LSTM layers to transl
 * Real-time action recognition base on action landmarks, include: face, two-hand, pose.
 * Integration of LLAMA3 to perform grammar correction.
 
-<p align="center"> <img src="img/1_1.gif" alt="drawing" width="450"/> </p>
+<p align="center"> <img src="img/1.gif" alt="drawing" width="450"/> </p>
 
 ## Description
 
