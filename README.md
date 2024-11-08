@@ -47,7 +47,14 @@ By combining advanced machine learning techniques and real-time action tracking,
 2. Change parameter:
    - Enter your API key in `grammar_correction.py` to acess to LLMs
    - Define your webcam index
+   - Define list of action that want to train and recognite
 4. Data collection:
    - Run `data_setup` to create data store folder
    - Run `data_collect.py` to start collect data from your webcam.
+5. Training model:
+   - Run `model.py` to start training model or load model using`.h5` file 
+6. Recognition realtime
+   - Run 'main.py` to start app.
+     + Pess `space` to reset sentence
+     + Press `enter` to grammar correction
 
