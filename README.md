@@ -44,4 +44,10 @@ By combining advanced machine learning techniques and real-time action tracking,
    ```sh
    pip install -r requirements.txt
    ```
+2. Change parameter:
+   - Enter your API key in `grammar_correction.py` to acess to LLMs
+   - Define your webcam index
+4. Data collection:
+   - Run `data_setup` to create data store folder
+   - Run `data_collect.py` to start collect data from your webcam.
 
