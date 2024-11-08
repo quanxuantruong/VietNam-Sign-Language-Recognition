@@ -42,7 +42,7 @@ By combining advanced machine learning techniques and real-time action tracking,
 ## Installation
 1. Install requirement
    ```sh
-   pip install -r requirements.txt
+   pip install -r requirement.txt
    ```
 2. Update parameter:
    - Enter your API key in `grammar_correction.py` to acess to LLMs
