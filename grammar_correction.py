@@ -7,7 +7,7 @@ client = openai.OpenAI(
     base_url="https://api.together.xyz/v1",
 )
 
-def get_code_completion(messages, max_tokens=512, model="meta-llama/Llama-3-70b-chat-hf"):
+def get_code_completion(messages, max_tokens=512, model="meta-llama/Meta-Llama-3-70B-Instruct-Lite"):
     chat_completion = client.chat.completions.create(
         messages=messages,
         model=model,
@@ -28,7 +28,11 @@ def grammar_correction(text):
     messages = [
         {
             "role": "system",
-            "content": "Từ các từ trên, hãy chuyển thành câu hoàn chỉnh, có ý nghĩa, tự nhiên nhất",
+            "content": "You are a grammar correction AI.",
+        },
+        {
+            "role": "user",
+            "content": "Từ câu nhận được, hãy sửa lỗi ngữ pháp thành câu hoàn chỉnh, có ý nghĩa, tự nhiên nhất, in ra 1 câu duy nhất, là tiếng việt không dấu, trả lời theo format mẫu ví dụ. Ví dụ: input: toi mau do thich, output: toi thich mau do ",
         },
         {
             "role": "user",
@@ -36,4 +40,6 @@ def grammar_correction(text):
         }
     ]
     chat_completion = get_code_completion(messages)
-    return chat_completion.choices[0].message['content']
+    return chat_completion.choices[0].message.content
+
+print(grammar_correction("toi mau hong thich"))
