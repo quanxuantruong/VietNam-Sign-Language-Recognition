@@ -4,7 +4,7 @@ This project is aimed at developing a Neural Network using LSTM layers to transl
 
 ### Key Features:
 * User-friendly data collection process for creating custom sign language datasets.
-* Real-time recognition base on action landmarks, include: face, two-hand, pose.
+* Real-time action recognition base on action landmarks, include: face, two-hand, pose.
 * Integration of LLAMA3 to perform grammar correction.
 
 <p align="center"> <img src="img/1_1.gif" alt="drawing" width="450"/> </p>
