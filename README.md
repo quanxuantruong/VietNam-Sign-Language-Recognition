@@ -57,4 +57,5 @@ By combining advanced machine learning techniques and real-time action tracking,
    - Run 'main.py` to start app.
      + Pess `space` to reset sentence
      + Press `enter` to grammar correction
+     + Press `q` to exit
 
