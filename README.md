@@ -38,3 +38,10 @@ By combining advanced machine learning techniques and real-time action tracking,
 
 ## Prerequisites
 * Python 3.6+
+
+## Installation
+1. Install requirement
+   ```sh
+   pip install -r requirements.txt
+   ```
+
