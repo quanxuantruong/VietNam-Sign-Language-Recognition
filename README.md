@@ -1,13 +1,13 @@
-# Sign-Language-Recognition
+# VietNam-Sign-Language-Recognition
 
-This project is aimed at developing a Neural Network using LSTM and Dense layers to translate VietNamese sign language into text (natural language). It enables real-time recognition as well as grammar correction of recognited sentences. 
+This project is aimed at developing a Neural Network using LSTM layers to translate VietNamese sign language into text (natural language). It enables real-time recognition as well as grammar correction of recognited sentences. 
 
 ### Key Features:
 * User-friendly data collection process for creating custom sign language datasets.
-* Real-time recognition base on action landmarks, include: face, two-hand, pose.
+* Real-time action recognition base on action landmarks, include: face, two-hand, pose.
 * Integration of LLAMA3 to perform grammar correction.
 
-<p align="center"> <img src="img/1_1.gif" alt="drawing" width="450"/> </p>
+<p align="center"> <img src="img/1.gif" alt="drawing" width="450"/> </p>
 
 ## Description
 
@@ -18,13 +18,13 @@ The whole project can be split into three main parts:
 
 ## Data Collection
 
-[MediaPipe Holistic](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/holistic.md) pipeline was used to record the data from the user's actions. Using [MediaPipe Holistic](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/holistic.md) instead of [MediaPipe Hands](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/hands.md) has improved the accuracy and diversity of the data, it processes each frame sent through it and results in the pose, face, left hand, and right hand components neatly stored in a variable. Each of the components can be represented by landmarks (these components' coordinates). In this case, only the hands' components' landmarks are being extracted resulting in overall 1626 data entries.
+[MediaPipe Holistic](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/holistic.md) pipeline was used to record the data from the user's actions. Using [MediaPipe Holistic](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/holistic.md) instead of [MediaPipe Hands](https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/hands.md) has improved the accuracy and diversity of the data, it processes each frame sent through it and results in the pose, face, left hand, and right hand components neatly stored in a variable. Each of the components can be represented by landmarks (these components' coordinates). In this case, only the hands' components' landmarks are being extracted resulting in overall 1662 data entries.
 
 ## Model Training
 
 After the data has been collected and the dataset is complete, the user can proceed with the model training. In this step, the dataset is split into two subsets: 90% of the dataset is used for training and 10% for testing. The accuracy of testing using this 10% of the dataset will provide insight into the efficiency of the model.
 
-For this particular project, the Neural Network is built using a Sequential model instance by passing three LSTM and three Densely-connected layers. The first five of these layers use the ReLU activation function with the last layer using the Softmax activation function. In the process of training, the Adam optimization algorithm is used to obtain optimal parameters for each layer.
+For this particular project, the Neural Network is built using a Sequential model instance by passing three LSTM and three Fully-connected layers. The first five of these layers use the ReLU activation function with the last layer using the Softmax activation function. In the process of training, the Adam optimization algorithm is used to obtain optimal parameters for each layer.
 
 Once the Neural Network is compiled, one can proceed with the model training and testing. During this step, the user can provide the model with the training subset, associated labels, and the number of epochs. Depending on the size of the provided subset and the number of epochs the training process can take up to a few minutes. Following the training, one can assess the model by performing predictions using the testing subset and evaluating the accuracy of these predictions.
 
@@ -39,10 +39,10 @@ By combining advanced machine learning techniques and real-time action tracking,
 ## Prerequisites
 * Python 3.6+
 
-## Installation
+## Installation and Usage
 1. Install requirement
    ```sh
-   pip install -r requirements.txt
+   pip install -r requirement.txt
    ```
 2. Update parameter:
    - Enter your API key in `grammar_correction.py` to acess to LLMs
@@ -57,4 +57,5 @@ By combining advanced machine learning techniques and real-time action tracking,
    - Run 'main.py` to start app.
      + Pess `space` to reset sentence
      + Press `enter` to grammar correction
+     + Press `q` to exit
 
