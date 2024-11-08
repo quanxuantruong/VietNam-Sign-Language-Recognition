@@ -4,6 +4,7 @@ from model import *
 from function import *
 import os
 from grammar_correction import *
+import keyboard
 
 # 1. New detection variables
 sequence = []
