@@ -11,7 +11,7 @@ import numpy as np
 DATA_PATH = os.path.join('MP_Data') 
 
 # Actions that we try to detect
-actions = np.array(['hello', 'thanks', 'iloveyou'])
+actions = np.array(['toi','thich','mau hong','none'])
 
 # Thirty videos worth of data
 no_sequences = 30
@@ -56,7 +56,7 @@ model.compile(optimizer='Adam', loss='categorical_crossentropy', metrics=['categ
 
 model.fit(X_train, y_train, epochs=2000, callbacks=[tb_callback])
 
-model.save('action.h5')
+model.save('action_kdn.h5')
 
 # Make predictions on the test set
 predictions = np.argmax(model.predict(X_test), axis=1)
