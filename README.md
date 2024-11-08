@@ -1,6 +1,6 @@
-# Sign-Language-Recognition
+# VietNam-Sign-Language-Recognition
 
-This project is aimed at developing a Neural Network using LSTM and Dense layers to translate VietNamese sign language into text (natural language). It enables real-time recognition as well as grammar correction of recognited sentences. 
+This project is aimed at developing a Neural Network using LSTM layers to translate VietNamese sign language into text (natural language). It enables real-time recognition as well as grammar correction of recognited sentences. 
 
 ### Key Features:
 * User-friendly data collection process for creating custom sign language datasets.
