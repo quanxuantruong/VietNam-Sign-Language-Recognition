@@ -44,9 +44,9 @@ By combining advanced machine learning techniques and real-time action tracking,
    ```sh
    pip install -r requirements.txt
    ```
-2. Change parameter:
+2. Update parameter:
    - Enter your API key in `grammar_correction.py` to acess to LLMs
-   - Define your webcam index
+   - Define and update your webcam index to cv2
    - Define list of action that want to train and recognite
 4. Data collection:
    - Run `data_setup` to create data store folder
